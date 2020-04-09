@@ -10,13 +10,13 @@ namespace PersonalProjectLab
         {
             int time = 0;
             int time2 = 0;
-            double inMuzzleVelocity = 0;
-            double elevation = 0;
-            double elevation2 = 0;
+            int inMuzzleVelocity = 0;
+            int elevation = 0;
+            int elevation2 = 0;
 
             inMuzzleVelocity = muzzleVelocity * 12;
-            decimal inMuzzleVelocityii = Convert.ToDecimal(inMuzzleVelocity);
-            Decimal.ToInt64(inMuzzleVelocityii);
+          
+            
            
             double angle2 = Math.Sin(angle);
             
@@ -27,7 +27,7 @@ namespace PersonalProjectLab
             Convert.ToDecimal(timeSquared);
 
             Convert.ToDecimal(angle2);
-            elevation = ((inMuzzleVelocityii * time) * angle2);
+            elevation = (Math.BigMul(inMuzzleVelocity, time) * Double.ToInt32(angle2));
             elevation2 = elevation - (0.5 * 386.09 * timeSquared);
             
             return elevation2;
